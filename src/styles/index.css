@@ -23,3 +23,69 @@ body {
 * {
   box-sizing: border-box;
 }
+
+/* ===== Markdown 消息内容 ===== */
+.prose-chat {
+  word-break: break-word;
+}
+
+.prose-chat :not(pre) > code {
+  border-radius: 0.375rem;
+  background: rgba(2, 6, 23, 0.7);
+  padding: 0.125rem 0.375rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  color: #c4b5fd;
+}
+
+.prose-chat pre code,
+.prose-chat pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+/* ===== highlight.js 代码高亮（精简暗色主题） ===== */
+.hljs {
+  color: #e2e8f0;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #64748b;
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-built_in {
+  color: #c084fc;
+}
+.hljs-string,
+.hljs-attr,
+.hljs-template-tag,
+.hljs-addition {
+  color: #4ade80;
+}
+.hljs-number,
+.hljs-symbol,
+.hljs-bullet {
+  color: #fbbf24;
+}
+.hljs-title,
+.hljs-section {
+  color: #38bdf8;
+}
+.hljs-type,
+.hljs-class .hljs-title {
+  color: #f472b6;
+}
+.hljs-variable,
+.hljs-template-variable,
+.hljs-property {
+  color: #f87171;
+}
+.hljs-meta,
+.hljs-punctuation {
+  color: #94a3b8;
+}
+.hljs-operator {
+  color: #cbd5e1;
+}
