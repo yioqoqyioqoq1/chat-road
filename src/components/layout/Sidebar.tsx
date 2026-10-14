@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom'
+import ConversationList from './ConversationList'
 import { CompassIcon, LogoutIcon, SparklesIcon } from '@/components/icons'
 import { useAuthStore } from '@/store/authStore'
 
@@ -21,7 +22,7 @@ export default function Sidebar({ onNavigate }: SidebarProps) {
         </span>
       </div>
 
-      <nav className="flex-1 space-y-1 overflow-y-auto p-3">
+      <nav className="shrink-0 space-y-1 p-3">
         {NAV_ITEMS.map(({ to, label, icon: Icon, end }) => (
           <NavLink
             key={to}
@@ -42,6 +43,8 @@ export default function Sidebar({ onNavigate }: SidebarProps) {
           </NavLink>
         ))}
       </nav>
+
+      <ConversationList onNavigate={onNavigate} />
 
       <div className="shrink-0 border-t border-slate-800 p-3">
         {user ? (

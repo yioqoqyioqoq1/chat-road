@@ -7,7 +7,8 @@ export default function AppLayout() {
   const [drawerOpen, setDrawerOpen] = useState(false)
 
   return (
-    <div className="flex h-screen overflow-hidden bg-slate-950 text-slate-100">
+    // 使用 100dvh 规避移动端浏览器地址栏导致的高度跳动
+    <div className="flex h-[100dvh] overflow-hidden bg-slate-950 text-slate-100">
       {/* 桌面端固定侧栏 */}
       <aside className="hidden w-64 shrink-0 border-r border-slate-800 lg:block">
         <Sidebar />
